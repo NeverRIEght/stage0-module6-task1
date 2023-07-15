@@ -7,6 +7,8 @@ public class Bird extends Animal {
 
     @Override
     public String getDescription() {
-        return "This animal is mostly "  + color + ". It has " + numberOfPaws + " paws and " + (hasFur == true ? "a" : "no") + " fur." + " Moreover, it has 2 wings and can fly.";
+        return "This animal is mostly "  + getColor() + ". It has " +
+                (getNumberOfPaws() == 1 ? (getNumberOfPaws() + " paw") : (getNumberOfPaws() + " paws")) +
+                " and " + (getFur() == true ? "a" : "no") + " fur." + " Moreover, it has 2 wings and can fly.";
     }
 }
